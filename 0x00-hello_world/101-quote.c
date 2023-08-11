@@ -4,7 +4,6 @@
 /**
  * main - prints exactly "and that piece of art is userful"
  * - Followed by NL
- * 
  * Return: Always 0 (success)
  */
 int main(void)
