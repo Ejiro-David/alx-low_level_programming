@@ -8,11 +8,13 @@
 int main(void)
 {
 char letter;
-
-do {
+for (letter = 'a'; letter <= 'z'; letter++)
+{
+if (letter != 'q' && letter != 'e')
+{
 putchar(letter);
-letter++;
-} while (letter != 'q' || letter != 'e');
+}
+}
 putchar('\n');
 return (0);
 }
