@@ -8,7 +8,7 @@
  */
 
 
-void main(void)
+int main(void)
 {
 int i, sum;
 for (i = 1023; i > 0; i--)
@@ -16,10 +16,6 @@ for (i = 1023; i > 0; i--)
 if(i % 3 == 0 || i % 5 == 0)
 {
 sum += i;
-}
-else
-{
-sum;
 }
 }
 printf("%d\n", sum);
