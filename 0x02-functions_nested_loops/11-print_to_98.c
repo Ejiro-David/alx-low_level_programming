@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_to_98 - Prints from pararm to 98 in order.
@@ -15,9 +16,7 @@ void print_to_98(int n)
 		int i;
 		for (i = n; n <= 98; i++)
 		{
-			_putchar(i);
-			_putchar(',');
-			_putchar(' ');
+			printf("%d, ", i);
 		}
 	}
 	else
@@ -25,9 +24,7 @@ void print_to_98(int n)
 		int j;
 		for (j = n; n > 98; j--)
                 {
-                        _putchar(j);
-                        _putchar(',');
-                        _putchar(' ');
+                        printf("%d, ", j);
                 }
 	}
 	_putchar('\n');
