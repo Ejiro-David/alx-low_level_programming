@@ -8,7 +8,7 @@
  */
 
 
-void main(int n)
+void main(void)
 {
 int i, sum;
 for (i = 1023; i > 0; i--)
