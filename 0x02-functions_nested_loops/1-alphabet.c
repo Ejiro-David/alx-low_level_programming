@@ -3,12 +3,12 @@
 /**
  * main - check the code
  *
- * Return: ALways 0
+ * Return: ALways 
  *
- * print_alphabet prints alpha
+ * print_alphabet - prints A to Z.
  */
 
-void print_alphabet(void)
+void print_alphabet(void) /* Prints out alphabet */
 {
 char letter = 'a';
 

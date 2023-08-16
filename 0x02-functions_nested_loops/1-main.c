@@ -7,6 +7,9 @@
  */
 
 int main(void)
+/**
+ * print_alphabet() - Prints alpha
+ */
 {
 print_alphabet();
 return (0);
