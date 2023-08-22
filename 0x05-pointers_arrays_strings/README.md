@@ -1,0 +1,3 @@
+pointing and arrays 
+
+
