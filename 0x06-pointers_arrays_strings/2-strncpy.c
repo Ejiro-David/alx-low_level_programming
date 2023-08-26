@@ -8,22 +8,17 @@
  * Return: pointer to sum str
  */
 
-char *_strncpyat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j;
-	char *ptr;
+	int i;
 
-	j = 0;
-
-	for (i = 0; src[j] != '\0'; i++)
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		if (dest[i] == '\0')
-		{
-			dest[i] = src[j];
-			j++;
-		}
+		dest[i] = src[i];
 	}
-	ptr = &dest[0];
-
-	return (ptr);
+	for (; i < n; i++)
+	{
+		dest[i] = '\0';
+	}
+	return (dest);
 }
