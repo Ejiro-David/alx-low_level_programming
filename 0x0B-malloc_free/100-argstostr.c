@@ -47,7 +47,7 @@ for (i = 0; i < ac; i++)
 strcpy(result + current_position, av[i]);
 current_position += strlen(av[i]);
 result[current_position] = '\n';
-current_position++[?12;4$y;
+current_position++;
 }
 
 result[current_position] = '\0';
