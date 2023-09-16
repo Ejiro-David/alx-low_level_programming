@@ -1,45 +1,72 @@
-#include "3-calc.h"
-#include <stdio.h>
+#11include "3-calc.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
-  * main - Entry point
-  * @argc: argument count
-  * @argv: argument vector
+ * op_add - adds @a and @b
+ *
+ * @a: arg 1
+ * @b: arg 2
+ *
+ * Return: result of the function
+*/
+
+int op_add(int a, int b)
+{
+	return (a + b);
+}
+
+/**
+ * op_sub - subtracts @a and @b
+ *
+ * @a: arg 1
+ * @b: arg 2
+ *
+ * Return: result
+*/
+
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+  * op_mul - multiplies @a by @b
+  * @a: arg 1
+  * @b: arg 2
   *
-  * Return: zero for success
+  * Return: result
   */
 
-int main(int argc, char *argv[])
+int op_mul(int a, int b)
 {
-	int x, y;
-	char *operator;
+	return (a * b);
+}
 
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
+/**
+ * op_div - divides @a by @b
+ *
+ * @a: arg 1
+ * @b: arg 2
+ *
+ * Return: result
+*/
 
-	x = atoi(argv[1]);
-	y = atoi(argv[3]);
-	operator = argv[2];
+int op_div(int a, int b)
+{
+	return (a / b);
+}
 
+/**
+ * op_mod - gets the reminder of the division between @a and @b
+ *
+ * @a: arg 1
+ * @b: arg 2
+ *
+ * Return: result
+*/
 
-	if (get_op_func(operator) == NULL || operator[1] != '\0')
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-
-	if ((*operator == 47 || *operator == 37) && y == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
-	printf("%d\n", get_op_func(operator)(x, y));
-
-	return (0);
+int op_mod(int a, int b)
+{
+	return (a % b);
 }
