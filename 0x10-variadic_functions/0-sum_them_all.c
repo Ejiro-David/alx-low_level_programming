@@ -23,11 +23,11 @@ int sum_them_all(const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		int current_arg = va_arg(args, int);
-		
+
 		sum += current_arg;
 	}
 
-	va_end(args); 
+	va_end(args);
 
-	return sum;
+	return (sum);
 }
