@@ -2,7 +2,7 @@
 #include <stdarg.h>
 
 /**
- * print_all - prints all passed in args
+ * print_all - prints all passed-in args
  */
 
 void print_all(const char * const format, ...)
@@ -13,11 +13,11 @@ void print_all(const char * const format, ...)
 
     va_start(args, format);
 
-    while (format && *format)
+    while (fmt && *fmt)
     {
-        int is_valid_format = 1; 
+        int is_valid_format = 1;
 
-        switch (*format)
+        switch (*fmt)
         {
             case 'c':
                 printf("%s%c", separator, va_arg(args, int));
@@ -42,18 +42,19 @@ void print_all(const char * const format, ...)
             }
 
             default:
-                is_valid_format = 0; 
+                is_valid_format = 0;
                 break;
         }
 
         if (is_valid_format)
         {
-            separator = ", "; 
+            separator = ", ";
         }
 
-        fmt++; 
+        fmt++;
     }
 
-    printf("\n"); 
+    printf("\n");
     va_end(args);
 }
+
