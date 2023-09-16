@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdarg.h>
-
 /**
  * print_all - prints all passed-in args
+ * @format: format
  */
-
 void print_all(const char * const format, ...)
 {
 va_list args;
@@ -12,7 +11,6 @@ char *separator = "";
 const char *fmt = format;
 
 va_start(args, format);
-
 while (fmt && *fmt)
 {
 int is_valid_format = 1;
