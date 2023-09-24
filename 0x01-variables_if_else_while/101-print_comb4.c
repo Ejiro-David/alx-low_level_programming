@@ -1,34 +1,34 @@
 #include <stdio.h>
 
 /**
- * main - Program entry point
- *
- * Return: Zero everytime the code is successful.
- */
+* main - the entry point
+*
+* Return: Always return (0) as a succcessful code
+*
+*/
 
 int main(void)
 {
-	int a, b;
-
-	for (a = 0; a <= 98; a++)
-	{
-		for (b = a + 1; b <= 99; b++)
-		{
-			putchar((a / 10) + '0');
-			putchar((a % 10) + '0');
-			putchar(' ');
-			putchar((b / 10) + '0');
-			putchar((b % 10) + '0');
-
-			if (a == 98 && b == 99)
-				continue;
-
-			putchar(',');
-			putchar(' ');
-		}
-	}
-
-	putchar('\n');
-
-	return (0);
+int i;
+int j;
+int k;
+for (i = 0; i <= 7; i++)
+{
+for (j = i + 1; j <= 8; j++)
+{
+for (k = j + 1; k <= 9; k++)
+{
+putchar(i + '0');
+putchar(j + '0');
+putchar(k + '0');
+if (i < 7 || j < 8 || k < 9)
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+}
+putchar('\n');
+return (0);
 }
