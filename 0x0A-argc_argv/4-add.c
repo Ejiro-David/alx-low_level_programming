@@ -1,35 +1,34 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
-#include <string.h>
+#include <stdlib.h>
 
 /**
- * main - adds positive numbers
- * @argc: number of arguments
- * @argv: array of arguements
- * Return: 0 for success 1 for failure
+ * main - adds positive numbers.
+ * @argc: argument count
+ * @argv: arguments
+ *
+ * Return: 0 or 1
  */
 
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
-	unsigned int j;
+	int sum = 0;
+	char *c;
 
-	if (argc == 1)
-		printf("0\n");
-
-	for (i = 1; i < argc; i++)
+	while (--argc)
 	{
-		for (j = 0; j < strlen(argv[i] - 1); j++)
+		for (c = argv[argc]; *c; c++)
 		{
-			if (!isdigit((unsigned char)argv[i][j]))
+			if (*c < '0' || *c > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
+
 		}
-			sum += atoi(argv[i]);
+		sum += atoi(argv[argc]);
 	}
+
 	printf("%d\n", sum);
 	return (0);
+
 }
