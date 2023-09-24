@@ -1,15 +1,20 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <stddef.h>
 
 /**
- * free_dog - frees up memory used by dog
- * @d: pointer locating dog struct
+ * free_dog - free dog malloc
+ * @d: pointer to the dog_t
+ * Return: void
  */
 
 void free_dog(dog_t *d)
 {
+	if (d == NULL)
+		return;
+
 	free(d->name);
 	free(d->owner);
-	free(d->age);
+
+	free(d);
+
 }
