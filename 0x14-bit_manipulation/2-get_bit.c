@@ -11,7 +11,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int i;
 
-	if ( n > 2500)
+	if (n > 2500)
 		return (-1);
 
 	i = n >> index;

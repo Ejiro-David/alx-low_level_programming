@@ -26,5 +26,3 @@ void print_binary(unsigned long int n)
 		putchar((n >> bit_position) & 1 ? '1' : '0');
 	}
 }
-
-	
