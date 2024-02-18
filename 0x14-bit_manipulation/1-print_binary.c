@@ -13,6 +13,11 @@ unsigned int bitmask = 1 << 31;
 int i = 0;
 int leadingZeros = 1;
 
+if (n == 0)
+{
+printf("0\n");
+return;
+}
 for (i = 0; i < 32; i++)
 {
 int bit = (n & bitmask) != 0;
