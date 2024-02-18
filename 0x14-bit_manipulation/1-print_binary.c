@@ -15,7 +15,7 @@ int leadingZeros = 1;
 
 if (n == 0)
 {
-printf("0\n");
+printf("0");
 return;
 }
 for (i = 0; i < 32; i++)
