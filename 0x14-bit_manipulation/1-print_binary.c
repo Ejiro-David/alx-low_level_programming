@@ -15,7 +15,7 @@ int leadingZeros = 1;
 
 if (n == 0)
 {
-printf("0");
+_putchar('0');
 return;
 }
 for (i = 0; i < 32; i++)
@@ -23,7 +23,7 @@ for (i = 0; i < 32; i++)
 int bit = (n & bitmask) != 0;
 if (bit || !leadingZeros)
 {
-printf("%d", bit);
+_putchar(bit ? '1' : '0');
 leadingZeros = 0;
 }
 bitmask >>= 1;
