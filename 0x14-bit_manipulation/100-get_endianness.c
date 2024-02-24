@@ -9,7 +9,7 @@
 int get_endianness(void)
 {
 	unsigned int i = 1;
-	char *bytePointer = (char *) & i;
+	char *bytePointer = (char *)&i;
 
 	if (*bytePointer == 1)
 	{
