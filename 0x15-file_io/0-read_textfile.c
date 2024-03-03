@@ -12,9 +12,11 @@
 size_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *filePointer;
+
 	size_t bytesRead;
 
 	char *buffer = malloc(letters);
+
 	filePointer = fopen(filename, "rb");
 
 	if (filePointer == NULL)
@@ -26,7 +28,7 @@ size_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 	{
 		fclose(filePointer);
-		return 0;
+		return (0);
 	}
 
 	bytesRead = fread(buffer, 1, letters, filePointer);
