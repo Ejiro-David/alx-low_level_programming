@@ -55,3 +55,22 @@ int copy_file(char *file_from, char *file_to)
 	}
 	return(0);
 }
+
+/**
+ * main - entry function
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 or 1.
+ */
+
+int main(int argc, char *argv[])
+{
+	if (argc != 3)
+	{
+		dprintf(2, "cp file_from file_to.\n");
+		exit(97);
+	}
+
+	copy_file(argv[1], argv[2]);
+	return (0);
+}
